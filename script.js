@@ -23,8 +23,6 @@ const resetGame = () => {
   msg.textContent = "";
 };
 
-resetBtn.addEventListener("click", resetGame);
-
 boxes.forEach((box) => {
   box.addEventListener("click", () => {
     if (turnO) {
@@ -76,12 +74,12 @@ const checkWinner = () => {
 
     if (pos1Val != "" && pos2Val != "" && pos3Val != "") {
       if (pos1Val === pos2Val && pos2Val === pos3Val) {
-        disableBoxes();
         showWinner(pos1Val);
-        //return true;
+        return true;
       }
     }
   }
 };
 
+resetBtn.addEventListener("click", resetGame);
 
