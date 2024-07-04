@@ -1,4 +1,4 @@
-let boxes = document.querySelectorAll(".cell");
+let boxes = Array.from(document.querySelectorAll(".cell"));
 let resetBtn = document.querySelector("#restart-btn");
 let msg = document.querySelector(".game-status");
 
